@@ -1,0 +1,30 @@
+{
+    "name": "envious-type",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "format": "prettier --write \"src/**/*.ts\"",
+        "build": "rm -rf ./dist && tsc --project tsconfig.json && npm run build:copyfiles",
+        "build:copyfiles": "cp package.json README.md dist/",
+        "start": "echo \"Error: start script not applicable\" && exit 1",
+        "preversion": "npm test && npm run format",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:antHogis/envious-type.git"
+    },
+    "author": "Anton Höglund",
+    "license": "UNLICENSED",
+    "homepage": "https://github.com/antHogis/envious-type#readme",
+    "devDependencies": {
+        "@types/node": "^20.16.11",
+        "prettier": "^2.0.2",
+        "typescript": "^5.6.3"
+    },
+    "dependencies": {
+        "ts-node": "^10.9.2"
+    }
+}
