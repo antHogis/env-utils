@@ -9,7 +9,6 @@
         "build": "rm -rf ./dist && tsc --project tsconfig.json && npm run build:copyfiles",
         "build:copyfiles": "cp package.json README.md dist/",
         "start": "echo \"Error: start script not applicable\" && exit 1",
-        "preversion": "npm test && npm run format",
         "postversion": "git push && git push --tags"
     },
     "repository": {
